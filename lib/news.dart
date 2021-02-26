@@ -104,13 +104,13 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Container(
               height: 50,
-              color: Colors.amber[600],
-              child: const Center(child: Text('Entry A')),
+              color: Colors.white,
+              child: const Center(child: Text('Politics News',style: TextStyle(color: Colors.teal),)),
             ),
             Container(
               height: 50,
-              color: Colors.amber[500],
-              child: const Center(child: Text('Entry B')),
+              color: Colors.white,
+              child: const Center(child: Text('Economic News',style: TextStyle(color: Color.fromRGBO(255, 121, 120, 1),),)),
             ),
             Container(
               height: 50,
