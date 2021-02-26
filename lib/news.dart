@@ -100,22 +100,68 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
       endDrawer:ListView(
-          padding: const EdgeInsets.all(8),
+
+          padding: const EdgeInsets.fromLTRB(190, 60, 20, 20),
           children: <Widget>[
             Container(
-              height: 50,
+              height:25,
+              width: 40,
               color: Colors.white,
               child: const Center(child: Text('Politics News',style: TextStyle(color: Colors.teal),)),
             ),
             Container(
-              height: 50,
+              height: 25,
+              width: 40,
               color: Colors.white,
               child: const Center(child: Text('Economic News',style: TextStyle(color: Color.fromRGBO(255, 121, 120, 1),),)),
             ),
             Container(
-              height: 50,
-              color: Colors.amber[100],
-              child: const Center(child: Text('Entry C')),
+              height:25,
+              width: 40,
+              color: Colors.white,
+              child: const Center(child: Text('Health News',style: TextStyle(color: Color.fromRGBO(51, 200, 204, 1)),)),
+            ),
+            Container(
+              height: 25,
+              width: 40,
+              color: Colors.white,
+              child: const Center(child: Text('Education News',style: TextStyle(color: Color.fromRGBO(220, 255, 0, 1),),)),
+            ),
+            Container(
+              height:25,
+              width: 100,
+              color: Colors.white,
+              child: const Center(child: Text('Science & Technology News',style: TextStyle(color: Color.fromRGBO(60, 74, 255, 1)),)),
+            ),
+            Container(
+              height: 25,
+              width: 40,
+              color: Colors.white,
+              child: const Center(child: Text('Arts & Fashion News',style: TextStyle(color: Color.fromRGBO(187, 32, 64,1),),)),
+            ),
+            Container(
+              height: 25,
+              width: 40,
+              color: Colors.white,
+              child: const Center(child: Text('Sport News',style: TextStyle(color: Color.fromRGBO(0, 230, 0, 1),),)),
+            ),
+            Container(
+              height: 25,
+              width: 40,
+              color: Colors.white,
+              child: const Center(child: Text('Cars News',style: TextStyle(color: Color.fromRGBO(255, 9, 93, 1),),)),
+            ),
+            Container(
+              height: 25,
+              width: 40,
+              color: Colors.white,
+              child: const Center(child: Text('Travel News',style: TextStyle(color: Color.fromRGBO(10, 255, 200, 1),),)),
+            ),
+            Container(
+              height: 25,
+              width: 40,
+              color: Colors.white,
+              child: const Center(child: Text('Astronomy & Horoscopes News',style: TextStyle(color: Color.fromRGBO(213, 126, 91, 1),),)),
             ),
           ],
 
@@ -159,6 +205,26 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <TextSpan>[
                     TextSpan(
                       text: 'Economic News \n',
+                      style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25),
+
+                    ),
+                    TextSpan(text: 'new'),
+                  ],
+                ),
+              ),
+              //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
+            ),
+          ),
+          //health
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 30),
+              color: Color.fromRGBO(51, 200, 204, 1),
+              child: RichText(
+                text: TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'Health News \n',
                       style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25),
 
                     ),
@@ -249,26 +315,6 @@ class _MyHomePageState extends State<MyHomePage> {
               //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
             ),
           ),
-          //health
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 30),
-              color: Color.fromRGBO(51, 200, 204, 1),
-              child: RichText(
-                text: TextSpan(
-                  children: <TextSpan>[
-                    TextSpan(
-                      text: 'Health News \n',
-                      style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25),
-
-                    ),
-                    TextSpan(text: 'new'),
-                  ],
-                ),
-              ),
-              //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
-            ),
-          ),
           //Cars
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -293,7 +339,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 30),
-              color: Color.fromRGBO(10, 200, 169, 1),
+              color: Color.fromRGBO(10, 255, 200, 1),
               child: RichText(
                 text: TextSpan(
                   children: <TextSpan>[
