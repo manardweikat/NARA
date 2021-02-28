@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-import 'package:login_and_registration/Registration.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'CommonLogo.dart';
-
+import 'Registration.dart';
+import 'news.dart';
+import 'news.dart';
 class SignInPage extends StatefulWidget {
   @override
   _SignInPageState createState() => _SignInPageState();
@@ -64,12 +65,23 @@ class _SignInPageState extends State<SignInPage> {
 
                   ]),
                   HStack([
-                    VxBox(child: "Get Started".text.white.makeCentered().p16()).green600.roundedLg.make(),
+                    GestureDetector(
+                      child: VxBox(child: "Get Started".text.white.makeCentered().p16()).green600.roundedLg.make(),
+                      onTap: (){
+                        print("Sign In");
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>MyHomePage()));
+                      },
+
+
+                    ),
+
+
                   ]),
                   GestureDetector(
                     onTap: (){
-                      print("Sign In");
+                      print("forgot Password");
                     },
+
                     child: HStack([
                       "Forgot Password?".text.white.makeCentered(),
                     ]).centered().p4(),
