@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_app1/categories.dart';
 import 'SignInPage.dart';
 import 'NewsMain.dart';
 class MyApp extends StatelessWidget {
@@ -374,12 +375,39 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-    )
+    ),
+     bottomNavigationBar: BottomNavigationBar(
+    items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+        icon: Icon(Icons.home),
+    label: 'Home',
+     ),
+    BottomNavigationBarItem(
+    icon: Icon(Icons.filter_list),
+    label: 'Categories',
+    ),
+    ],
+
+    currentIndex: _selectedIndex,
+    selectedItemColor: Colors.redAccent,
+    onTap: _onItemTapped,
 
 
-
-
+    ),
 
     );
+  }
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+      print(_selectedIndex);
+      if(_selectedIndex ==0) Navigator.push(context,MaterialPageRoute(builder: (context)=>MyHomePage()));
+      else if(_selectedIndex==1) Navigator.push(context,MaterialPageRoute(builder: (context)=>Categories()));
+
+    });
   }
 }
