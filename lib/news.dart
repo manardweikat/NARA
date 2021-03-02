@@ -4,8 +4,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_app1/categories.dart';
+import 'package:flutter_app1/news/astronomy&horoscopes.dart';
+import 'package:flutter_app1/news/economic.dart';
+import 'package:flutter_app1/news/education.dart';
+import 'package:flutter_app1/news/health.dart';
+import 'package:flutter_app1/news/science&technology.dart';
+import 'package:flutter_app1/news/travel.dart';
 import 'SignInPage.dart';
 import 'NewsMain.dart';
+import 'news/art&fashion.dart';
+import 'news/car.dart';
+import 'news/politics.dart';
+import 'news/sport.dart';
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -98,68 +108,120 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
       endDrawer:ListView(
-
-          padding: const EdgeInsets.fromLTRB(190, 60, 20, 20),
+        padding: const EdgeInsets.fromLTRB(190, 60, 20, 20),
           children: <Widget>[
-            Container(
+             GestureDetector(
+               onTap: (){
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>Politics()));
+                },
+            child: Container(
               height:25,
               width: 40,
               color: Colors.white,
               child: const Center(child: Text('Politics News',style: TextStyle(color: Colors.teal),)),
             ),
-            Container(
+            ),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Economic()));
+              },
+             child:Container(
               height: 25,
               width: 40,
               color: Colors.white,
               child: const Center(child: Text('Economic News',style: TextStyle(color: Color.fromRGBO(255, 121, 120, 1),),)),
             ),
-            Container(
+            ),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Health()));
+              },
+              child:Container(
               height:25,
               width: 40,
               color: Colors.white,
               child: const Center(child: Text('Health News',style: TextStyle(color: Color.fromRGBO(51, 200, 204, 1)),)),
             ),
-            Container(
+            ),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Education()));
+              },
+              child:Container(
               height: 25,
               width: 40,
               color: Colors.white,
               child: const Center(child: Text('Education News',style: TextStyle(color: Color.fromRGBO(220, 255, 0, 1),),)),
             ),
-            Container(
+             ),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ScienceTechnology()));
+              },
+              child:Container(
               height:25,
               width: 100,
               color: Colors.white,
               child: const Center(child: Text('Science & Technology News',style: TextStyle(color: Color.fromRGBO(60, 74, 255, 1)),)),
             ),
-            Container(
+            ),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ArtFashion()));
+              },
+              child:Container(
               height: 25,
               width: 40,
               color: Colors.white,
               child: const Center(child: Text('Arts & Fashion News',style: TextStyle(color: Color.fromRGBO(187, 32, 64,1),),)),
             ),
-            Container(
+            ),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Sport()));
+              },
+              child:Container(
               height: 25,
               width: 40,
               color: Colors.white,
               child: const Center(child: Text('Sport News',style: TextStyle(color: Color.fromRGBO(0, 230, 0, 1),),)),
             ),
+            ),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Car()));
+              },
+              child:
             Container(
               height: 25,
               width: 40,
               color: Colors.white,
               child: const Center(child: Text('Cars News',style: TextStyle(color: Color.fromRGBO(255, 9, 93, 1),),)),
             ),
+            ),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Travel()));
+              },
+              child:
             Container(
               height: 25,
               width: 40,
               color: Colors.white,
               child: const Center(child: Text('Travel News',style: TextStyle(color: Color.fromRGBO(10, 255, 200, 1),),)),
             ),
+            ),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Astronomy()));
+              },
+              child:
             Container(
               height: 25,
               width: 40,
               color: Colors.white,
               child: const Center(child: Text('Astronomy & Horoscopes News',style: TextStyle(color: Color.fromRGBO(213, 126, 91, 1),),)),
+            ),
             ),
           ],
 

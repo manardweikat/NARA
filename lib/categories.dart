@@ -3,9 +3,18 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_app1/news/art&fashion.dart';
+import 'package:flutter_app1/news/astronomy&horoscopes.dart';
+import 'package:flutter_app1/news/car.dart';
+import 'package:flutter_app1/news/economic.dart';
+import 'package:flutter_app1/news/education.dart';
+import 'package:flutter_app1/news/health.dart';
+import 'package:flutter_app1/news/science&technology.dart';
+import 'package:flutter_app1/news/sport.dart';
 import 'SignInPage.dart';
 import 'NewsMain.dart';
 import 'news.dart';
+import 'news/politics.dart';
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -106,7 +115,11 @@ class _MyHomePageState extends State<Categories> {
           verticalDirection: VerticalDirection.down,
           children: <Widget>[
             //politics
-            Padding(
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Politics()));
+              },
+           child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 10),
                 color: Colors.teal,
@@ -123,8 +136,13 @@ class _MyHomePageState extends State<Categories> {
                 //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
               ),
             ),
+            ),
             //economic
-            Padding(
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Economic()));
+              },
+            child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 10),
                 color: Color.fromRGBO(255, 121, 120, 1),
@@ -143,8 +161,13 @@ class _MyHomePageState extends State<Categories> {
                 //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
               ),
             ),
+            ),
             //health
-            Padding(
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Health()));
+              },
+              child:Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 10),
                 color: Color.fromRGBO(51, 200, 204, 1),
@@ -162,8 +185,13 @@ class _MyHomePageState extends State<Categories> {
                 //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
               ),
             ),
+            ),
             //education
-            Padding(
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Education()));
+              },
+              child:Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 10),
                 color: Color.fromRGBO(230, 255, 0, 1),
@@ -180,8 +208,13 @@ class _MyHomePageState extends State<Categories> {
                 //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
               ),
             ),
+           ),
             //science & tech
-            Padding(
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ScienceTechnology()));
+              },
+              child:Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 10),
                 color: Color.fromRGBO(60, 74, 255, 1),
@@ -198,8 +231,13 @@ class _MyHomePageState extends State<Categories> {
                 //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
               ),
             ),
+            ),
             //art
-            Padding(
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ArtFashion()));
+              },
+              child:Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 10),
                 color: Color.fromRGBO(187, 32, 64,1),
@@ -215,11 +253,15 @@ class _MyHomePageState extends State<Categories> {
                     ],
                   ),
                 ),
-                //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
+              ),
               ),
             ),
             //sport
-            Padding(
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Sport()));
+              },
+              child:Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 10),
                 color: Color.fromRGBO(0, 230, 0, 1),
@@ -234,11 +276,15 @@ class _MyHomePageState extends State<Categories> {
                     ],
                   ),
                 ),
-                //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
+              ),
               ),
             ),
             //Cars
-            Padding(
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Car()));
+              },
+              child:Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 10),
                 color: Color.fromRGBO(255, 9, 93, 1),
@@ -253,11 +299,15 @@ class _MyHomePageState extends State<Categories> {
                     ],
                   ),
                 ),
-                //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
+              ),
               ),
             ),
             //travel
-            Padding(
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Car()));
+              },
+              child:Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 10),
                 color: Color.fromRGBO(10, 255, 200, 1),
@@ -272,11 +322,15 @@ class _MyHomePageState extends State<Categories> {
                     ],
                   ),
                 ),
-                //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
+              ),
               ),
             ),
             //astronomy & horoscopes
-            Padding(
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Astronomy()));
+              },
+              child:Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(padding: EdgeInsets.fromLTRB(20, 20, 50, 10),
                 color: Color.fromRGBO(213, 126, 91, 1),
@@ -291,7 +345,7 @@ class _MyHomePageState extends State<Categories> {
                     ],
                   ),
                 ),
-                //    child: Text('Politics News\n',style: TextStyle(color: Colors.white,),textAlign: TextAlign.left,overflow: TextOverflow.ellipsis,maxLines: 4,),
+              ),
               ),
             ),
           ],
