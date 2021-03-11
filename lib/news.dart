@@ -63,10 +63,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        backgroundColor: Colors.redAccent,
-        title: const Text('NAR App'),
-        leading: Builder( builder: (context){return IconButton(icon: Icon(Icons.menu), onPressed: (){Scaffold.of(context).openDrawer();},);},),
-       actions: <Widget>[Builder( builder: (context){return IconButton(icon: Icon(Icons.filter_list), onPressed: (){Scaffold.of(context).openEndDrawer();},);},)],),
+
+        backgroundColor: Colors.transparent,
+        title: const Text('NAR App',style: TextStyle(color:Color.fromRGBO(255, 138, 128, 1),fontWeight: FontWeight.bold,fontSize: 27)),
+        centerTitle: true,
+        leading: Builder( builder: (context){return IconButton(icon: Icon(Icons.menu,color: Color.fromRGBO(255, 138, 128, 1),), onPressed: (){Scaffold.of(context).openDrawer();},);},),
+       actions: <Widget>[Builder( builder: (context){return IconButton(icon: Icon(Icons.filter_list), onPressed: (){Scaffold.of(context).openEndDrawer();},);},)],
+      elevation: 0.0,
+      ),
       //),
 
       drawer: Drawer(
@@ -76,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
             DrawerHeader(
 
               decoration: BoxDecoration(
-                color: Colors.redAccent,
+                color: Colors.redAccent[100],
               ),
               child: Text(
                 'NARA',
