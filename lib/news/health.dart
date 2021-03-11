@@ -24,7 +24,12 @@ class Health extends StatefulWidget {
 class _HealthState extends State<Health> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(51 , 200, 204, 1),
+        title: Text('Health News'),
+      ),
+    );
   }
 }
 

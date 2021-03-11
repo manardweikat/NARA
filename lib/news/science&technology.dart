@@ -24,7 +24,12 @@ class ScienceTechnology extends StatefulWidget {
 class _ScienceTechnologyState extends State<ScienceTechnology> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor:  Color.fromRGBO(60, 74, 255, 1),
+       title: Text('Science & Technology News'),
+      ),
+    );
   }
 }
 

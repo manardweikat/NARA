@@ -24,7 +24,12 @@ class Car extends StatefulWidget {
 class _CarState extends State<Car> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(255, 9, 93, 1),
+        title: Text('Cars News'),
+      ),
+    );
   }
 }
 

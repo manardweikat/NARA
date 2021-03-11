@@ -10,8 +10,10 @@ import 'package:flutter_app1/news/education.dart';
 import 'package:flutter_app1/news/health.dart';
 import 'package:flutter_app1/news/science&technology.dart';
 import 'package:flutter_app1/news/travel.dart';
+import 'package:flutter_app1/main.dart';
 import 'SignInPage.dart';
 import 'NewsMain.dart';
+import 'main.dart';
 import 'news/art&fashion.dart';
 import 'news/car.dart';
 import 'news/politics.dart';
@@ -70,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
-          children: const <Widget>[
+          children:  <Widget>[
             DrawerHeader(
 
               decoration: BoxDecoration(
@@ -94,13 +96,16 @@ class _MyHomePageState extends State<MyHomePage> {
               leading: Icon(Icons.settings),
               title: Text('Settings'),
             ),
-            ListTile(
+            /*ListTile(
               leading: Icon(Icons.account_circle_outlined),
               title: Text('Sign-up'),
-            ),
+            ),*/
             ListTile(
               leading: Icon(Icons.account_circle_outlined),
               title: Text('Sign-out'),
+              onTap:(){
+               Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>SignIn()));
+              },
             ),
           ],
         ),
@@ -468,7 +473,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _selectedIndex = index;
       print(_selectedIndex);
       if(_selectedIndex ==0) Navigator.push(context,MaterialPageRoute(builder: (context)=>MyHomePage()));
-      else if(_selectedIndex==1) Navigator.push(context,MaterialPageRoute(builder: (context)=>Categories()));
+      else Navigator.push(context,MaterialPageRoute(builder: (context)=>Categories()));
 
     });
   }

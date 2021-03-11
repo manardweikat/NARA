@@ -24,7 +24,12 @@ class Sport extends StatefulWidget {
 class _SportState extends State<Sport> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(0, 230, 0, 1),
+        title: Text('Sport News'),
+      ),
+    );
   }
 }
 

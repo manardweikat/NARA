@@ -24,7 +24,12 @@ class Education extends StatefulWidget {
 class _EducationState extends State<Education> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(230, 255,0, 1),
+        title: Text('Education News'),
+      ),
+    );
   }
 }
 

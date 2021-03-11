@@ -361,9 +361,9 @@ class _MyHomePageState extends State<Categories> {
           BottomNavigationBarItem(
             icon: Icon(Icons.filter_list),
             label: 'Categories',
-
           ),
         ],
+        unselectedItemColor: Colors.amber,
 
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.redAccent,
@@ -382,8 +382,11 @@ class _MyHomePageState extends State<Categories> {
     setState(() {
       _selectedIndex = index;
       print(_selectedIndex);
+
       if(_selectedIndex ==0) Navigator.push(context,MaterialPageRoute(builder: (context)=>MyHomePage()));
-       if(_selectedIndex==1) Navigator.push(context,MaterialPageRoute(builder: (context)=>Categories()));
+    //   if(_selectedIndex==1) Navigator.push(context,MaterialPageRoute(builder: (context)=>Categories()));
+      //if(_selectedIndex==2)
+      else Navigator.push(context,MaterialPageRoute(builder: (context)=>Categories()));
 
     });
   }

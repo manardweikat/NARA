@@ -24,7 +24,12 @@ class Travel extends StatefulWidget {
 class _TravelState extends State<Travel> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(10, 255, 200, 1),
+        title: Text('Travel News'),
+      ),
+    );
   }
 }
 

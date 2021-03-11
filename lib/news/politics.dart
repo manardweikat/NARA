@@ -24,7 +24,12 @@ class Politics extends StatefulWidget {
 class _PoliticsState extends State<Politics> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.teal,
+        title: Text('Politics News'),
+      ),
+    );
   }
 }
 

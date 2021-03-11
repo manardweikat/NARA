@@ -24,7 +24,12 @@ class Economic extends StatefulWidget {
 class _EconomicState extends State<Economic> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(255, 121, 120, 1),
+        title: Text('Economic News'),
+      ),
+    );
   }
 }
 

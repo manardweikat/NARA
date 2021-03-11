@@ -24,7 +24,12 @@ class ArtFashion extends StatefulWidget {
 class _ArtFashionState extends State<ArtFashion> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(187, 32, 64,1),
+        title: Text('Arts & Fashion News'),
+      ),
+    );
   }
 }
 
